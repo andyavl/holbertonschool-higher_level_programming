@@ -6,3 +6,4 @@
 1. Print integer
 2. Print float
 3. Print string
+4. Play with strings
