@@ -8,3 +8,4 @@
 3. Print string
 4. Play with strings
 5. Copy - Cut - Paste
+6. Create a new sentence
