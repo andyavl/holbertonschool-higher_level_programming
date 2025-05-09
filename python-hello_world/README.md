@@ -7,3 +7,4 @@
 2. Print float
 3. Print string
 4. Play with strings
+5. Copy - Cut - Paste
