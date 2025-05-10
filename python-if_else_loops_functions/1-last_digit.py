@@ -12,6 +12,6 @@ if lastdigit > 5:
 elif lastdigit == 0:
     phrase = "0"
 else:
-    phrase = "less then 6 and not 0"
+    phrase = "less than 6 and not 0"
 
 print(f"Last digit of {number} is {lastdigit} and is {phrase}")
