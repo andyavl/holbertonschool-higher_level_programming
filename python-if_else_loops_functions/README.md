@@ -13,3 +13,4 @@
 8. To uppercase
 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
 10. a + b
+11. a ^ b
