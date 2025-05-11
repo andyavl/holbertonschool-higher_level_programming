@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-value = 97
-while value <= 122:
-    str(print(chr(value), end=""))
-    value += 1
+for value in range(97, 123):
+    print("{}".format(chr(value)), end="")
+    
