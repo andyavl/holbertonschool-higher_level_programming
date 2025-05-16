@@ -9,3 +9,4 @@
 4. Only differents
 5. Number of keys
 6. Print sorted dictionary
+7. Update dictionary
