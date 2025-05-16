@@ -4,9 +4,4 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
 
-    who = next(iter(a_dictionary))
-    best = next(iter(a_dictionary.values()))
-    for key in a_dictionary:
-        if a_dictionary[key] > best:
-            who = key
-    return who
+    return max(a_dictionary, key=a_dictionary.get)
