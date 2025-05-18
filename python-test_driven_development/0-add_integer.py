@@ -6,6 +6,8 @@ Floats are cast to integers before the addition.
 If the input is invalid, a TypeError is raised.
 The result is returned as an integer.
 """
+
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats after casting.
