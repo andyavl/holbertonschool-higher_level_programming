@@ -23,7 +23,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     row_length = len(matrix[0])
-    for i in range(1, len(matrix)):
+    for i in range(len(matrix)):
         if len(matrix[i]) != row_length:
             raise TypeError(
                 "Each row of the matrix must have the same size"
