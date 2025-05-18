@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
 
+    try:
+        roman_string = roman_string.upper()
+    except AttributeError:
+        return 0
     if not roman_string:
         return 0
 
