@@ -23,8 +23,6 @@ No.
 Just text with no punctuation
 
 >>> text_indentation("")
-<BLANKLINE>
-
 >>> text_indentation(123)
 Traceback (most recent call last):
     ...
