@@ -2,33 +2,36 @@
 
 >>> text_indentation("Hello. How are you? I'm fine:")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 I'm fine:
+<BLANKLINE>
 
->>> text_indentation("Hi.")
-Hi.
+>>> text_indentation("A simple sentence with no punctuation")
+A simple sentence with no punctuation
 
 >>> text_indentation("Hi.    How?Yes:No.")
 Hi.
-
+<BLANKLINE>
 How?
-
+<BLANKLINE>
 Yes:
-
+<BLANKLINE>
 No.
+<BLANKLINE>
 
->>> text_indentation("Just text with no punctuation")
-Just text with no punctuation
+>>> text_indentation("Line with\nnew line character.")
+Line with
+new line character.
+<BLANKLINE>
 
->>> text_indentation("")
 >>> text_indentation(123)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
 
->>> text_indentation()
+>>> text_indentation()  # Missing one argument
 Traceback (most recent call last):
     ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
