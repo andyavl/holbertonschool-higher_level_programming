@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class Square with size validation, area computation, and accessors."""
- 
+"""Defines a class Square with size validation,
+    area computation, and accessors."""
+
 
 class Square:
     """Represents a square.
@@ -53,4 +54,3 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        
