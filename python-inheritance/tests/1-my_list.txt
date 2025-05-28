@@ -34,3 +34,18 @@
 
 >>> MyList([1]).print_sorted()
 [1]
+
+>>> negatives = MyList()
+>>> negatives.append(5)
+>>> negatives.append(-3)
+>>> negatives.append(2)
+>>> negatives.append(-10)
+>>> negatives.append(0)
+>>> negatives
+[5, -3, 2, -10, 0]
+
+>>> negatives.print_sorted()
+[-10, -3, 0, 2, 5]
+
+>>> negatives
+[5, -3, 2, -10, 0]
