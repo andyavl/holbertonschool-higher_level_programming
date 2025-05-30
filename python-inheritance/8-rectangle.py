@@ -5,6 +5,7 @@ Defines a base class for geometry operations.
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     Represents a rectangle using validated width and height.
