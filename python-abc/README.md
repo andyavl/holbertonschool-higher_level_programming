@@ -4,3 +4,4 @@
 
 0. Abstract Animal Class and its Subclasses
 1. Shapes, Interfaces, and Duck Typing
+2. Extending the Python List with Notifications
