@@ -3,3 +3,4 @@
 ## Tasks:
 
 0. Abstract Animal Class and its Subclasses
+1. Shapes, Interfaces, and Duck Typing
