@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Defines an abstract Shape class and its subclasses Circle and Square.
+Defines an abstract Shape class and its subclasses Circle and Rectangle.
 """
 
 from abc import ABC, abstractmethod
@@ -62,5 +62,5 @@ def shape_info(shape):
     """
     Prints the area and perimeter of the shape.
     """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
