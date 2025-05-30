@@ -2,7 +2,6 @@
 """
 Defines an abstract Shape class and its subclasses Circle and Rectangle.
 """
-
 from abc import ABC, abstractmethod
 import math
 
@@ -29,7 +28,7 @@ class Circle(Shape):
     """
 
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Return the area of the circle."""
