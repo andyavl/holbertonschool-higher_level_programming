@@ -40,7 +40,7 @@ class CustomObject:
             filename (str): The name of the file to save the object to.
         """
         with open(filename, "wb") as file:
-            pickle.dump(self, file)
+            return pickle.dump(self, file)
     
     @classmethod
     def deserialize(cls, filename):
