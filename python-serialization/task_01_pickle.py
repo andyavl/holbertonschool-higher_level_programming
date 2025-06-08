@@ -5,16 +5,14 @@ and deserialization using the pickle module.
 """
 
 import pickle
+"""
+Represents a custom object with a name, age, and student status.
 
+This class provides methods to display its attributes,
+serialize itself to a binary file, and deserialize itself from a file.
+"""
 
 class CustomObject:
-    """
-    Represents a custom object with a name, age, and student status.
-
-    This class provides methods to display its attributes,
-    serialize itself to a binary file, and deserialize itself from a file.
-    """
-
     def __init__(self, name, age, is_student):
         """
         Initializes a new CustomObject instance.
@@ -27,14 +25,13 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
-
+    
     def display(self):
         """
         Prints the attributes of the object in a readable format.
         """
-        print(f"Name: {self.name}\nAge: {self.age}\n"
-              f"Is Student: {self.is_student}")
-
+        print(f"Name: {self.name}\nAge: {self.age}\nIs Student: {self.is_student}")
+    
     def serialize(self, filename):
         """
         Serializes the object and saves it to a binary file using pickle.
@@ -42,9 +39,9 @@ class CustomObject:
         Args:
             filename (str): The name of the file to save the object to.
         """
-        with open(filename, "wb") as myFile:
-            pickle.dump(self, myFile)
-
+        with open(filename, "wb") as file:
+            pickle.dump(self, file)
+    
     @classmethod
     def deserialize(cls, filename):
         """
@@ -54,11 +51,11 @@ class CustomObject:
             filename (str): The name of the file to read from.
 
         Returns:
-            CustomObject or None: The deserialized object if successful,
+            CustomObject or None: The deserialized object if successful, 
             or None if the file is not found or contains invalid data.
         """
         try:
-            with open(filename, "rb") as myFile:
-                return pickle.load(myFile)
+            with open(filename, "rb") as file:
+                return pickle.load(file)
         except (FileNotFoundError, pickle.UnpicklingError):
             return None
