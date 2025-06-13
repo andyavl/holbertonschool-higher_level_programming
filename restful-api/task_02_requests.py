@@ -34,7 +34,7 @@ def fetch_and_save_posts():
     If the response is successful (200 OK), this function:
     - Parses the JSON data from the response.
     - Writes the post data into a CSV file named 'posts.csv' with
-      the fields: 'userId', 'id', 'title', and 'body'.
+      the fields: 'id', 'title', and 'body'.
     Otherwise, it prints the status code.
     """
     response = requests.get('https://jsonplaceholder.typicode.com/posts')
@@ -45,7 +45,8 @@ def fetch_and_save_posts():
                   encoding='utf-8') as csvFile:
             fileData = csv.DictWriter(
                 csvFile,
-                fieldnames=['userId', 'id', 'title', 'body']
+                fieldnames=['id', 'title', 'body'],
+                extrasaction='ignore'
             )
             fileData.writeheader()
             for post in postsDic:
