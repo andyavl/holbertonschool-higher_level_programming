@@ -34,6 +34,12 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(data).encode('utf-8'))
 
+        elif self.path == '/':
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b'Simple API root')
+
         elif self.path == '/status':
             self.send_response(200)
             self.send_header('Content-Type', 'text/plain')
