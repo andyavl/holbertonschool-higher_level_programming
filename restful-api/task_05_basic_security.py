@@ -30,11 +30,8 @@ users = {
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if not user:
-        return False
-    if not check_password_hash(user["password"], password):
-        return False
-    return username
+    if user and check_password_hash(user['password'], password):
+        return username
 
 @auth.error_handler
 def auth_error(status):
