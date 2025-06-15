@@ -30,13 +30,20 @@ users = {
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if user and check_password_hash(user['password'], password):
-        return username
+    if not user:
+        return False
+    if not check_password_hash(user["password"], password):
+        return False
+    return username
+
+@auth.error_handler
+def auth_error(status):
+    return jsonify({"error": "Unauthorized"}), 401
 
 @app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
-    return "Basic Auth: Access Granted"
+    return jsonify({"message": "Basic Auth: Access Granted"})
 
 @app.route('/login', methods=['POST'])
 def login():
