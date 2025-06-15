@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (
     JWTManager, create_access_token,
@@ -34,8 +34,8 @@ def verify_password(username, password):
         return username
 
 @auth.error_handler
-def auth_error(status):
-    return jsonify({"error": "Unauthorized"}), 401
+def unauthorized():
+    return make_response(jsonify({'error': 'Unauthorized'}), 401)
 
 @app.route('/basic-protected')
 @auth.login_required
