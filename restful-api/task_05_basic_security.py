@@ -33,7 +33,7 @@ users = {
 def verify_password(username, password):
     user = users.get(username)
     if user and check_password_hash(user["password"], password):
-        return user
+        return username
     return None
 
 @auth.error_handler
