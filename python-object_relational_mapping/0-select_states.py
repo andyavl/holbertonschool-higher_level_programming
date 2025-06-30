@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This script connects to a MySQL database and lists all states
 in the 'states' table, ordered by the 'id' column in ascending order.
