@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Lists all states from the 'states' table where name matches the argument (safely),
 using parameterized queries to prevent SQL injection.
